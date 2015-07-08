@@ -1,0 +1,433 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		841205B41B4CF82F00717ECB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 841205B31B4CF82F00717ECB /* main.m */; };
+		841205B71B4CF82F00717ECB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 841205B61B4CF82F00717ECB /* AppDelegate.m */; };
+		841205BA1B4CF82F00717ECB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 841205B91B4CF82F00717ECB /* ViewController.m */; };
+		841205BD1B4CF83000717ECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 841205BB1B4CF83000717ECB /* Main.storyboard */; };
+		841205BF1B4CF83000717ECB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 841205BE1B4CF83000717ECB /* Images.xcassets */; };
+		841205C21B4CF83000717ECB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 841205C01B4CF83000717ECB /* LaunchScreen.xib */; };
+		841205CE1B4CF83000717ECB /* cognalysDemoAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 841205CD1B4CF83000717ECB /* cognalysDemoAppTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		841205C81B4CF83000717ECB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 841205A61B4CF82F00717ECB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 841205AD1B4CF82F00717ECB;
+			remoteInfo = cognalysDemoApp;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		841205AE1B4CF82F00717ECB /* cognalysDemoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = cognalysDemoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		841205B21B4CF82F00717ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		841205B31B4CF82F00717ECB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		841205B51B4CF82F00717ECB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		841205B61B4CF82F00717ECB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		841205B81B4CF82F00717ECB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		841205B91B4CF82F00717ECB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		841205BC1B4CF83000717ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		841205BE1B4CF83000717ECB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		841205C11B4CF83000717ECB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		841205C71B4CF83000717ECB /* cognalysDemoAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = cognalysDemoAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		841205CC1B4CF83000717ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		841205CD1B4CF83000717ECB /* cognalysDemoAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = cognalysDemoAppTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		841205AB1B4CF82F00717ECB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841205C41B4CF83000717ECB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		841205A51B4CF82F00717ECB = {
+			isa = PBXGroup;
+			children = (
+				841205B01B4CF82F00717ECB /* cognalysDemoApp */,
+				841205CA1B4CF83000717ECB /* cognalysDemoAppTests */,
+				841205AF1B4CF82F00717ECB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		841205AF1B4CF82F00717ECB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				841205AE1B4CF82F00717ECB /* cognalysDemoApp.app */,
+				841205C71B4CF83000717ECB /* cognalysDemoAppTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		841205B01B4CF82F00717ECB /* cognalysDemoApp */ = {
+			isa = PBXGroup;
+			children = (
+				841205B51B4CF82F00717ECB /* AppDelegate.h */,
+				841205B61B4CF82F00717ECB /* AppDelegate.m */,
+				841205B81B4CF82F00717ECB /* ViewController.h */,
+				841205B91B4CF82F00717ECB /* ViewController.m */,
+				841205BB1B4CF83000717ECB /* Main.storyboard */,
+				841205BE1B4CF83000717ECB /* Images.xcassets */,
+				841205C01B4CF83000717ECB /* LaunchScreen.xib */,
+				841205B11B4CF82F00717ECB /* Supporting Files */,
+			);
+			path = cognalysDemoApp;
+			sourceTree = "<group>";
+		};
+		841205B11B4CF82F00717ECB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				841205B21B4CF82F00717ECB /* Info.plist */,
+				841205B31B4CF82F00717ECB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		841205CA1B4CF83000717ECB /* cognalysDemoAppTests */ = {
+			isa = PBXGroup;
+			children = (
+				841205CD1B4CF83000717ECB /* cognalysDemoAppTests.m */,
+				841205CB1B4CF83000717ECB /* Supporting Files */,
+			);
+			path = cognalysDemoAppTests;
+			sourceTree = "<group>";
+		};
+		841205CB1B4CF83000717ECB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				841205CC1B4CF83000717ECB /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		841205AD1B4CF82F00717ECB /* cognalysDemoApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 841205D11B4CF83000717ECB /* Build configuration list for PBXNativeTarget "cognalysDemoApp" */;
+			buildPhases = (
+				841205AA1B4CF82F00717ECB /* Sources */,
+				841205AB1B4CF82F00717ECB /* Frameworks */,
+				841205AC1B4CF82F00717ECB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = cognalysDemoApp;
+			productName = cognalysDemoApp;
+			productReference = 841205AE1B4CF82F00717ECB /* cognalysDemoApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+		841205C61B4CF83000717ECB /* cognalysDemoAppTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 841205D41B4CF83000717ECB /* Build configuration list for PBXNativeTarget "cognalysDemoAppTests" */;
+			buildPhases = (
+				841205C31B4CF83000717ECB /* Sources */,
+				841205C41B4CF83000717ECB /* Frameworks */,
+				841205C51B4CF83000717ECB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				841205C91B4CF83000717ECB /* PBXTargetDependency */,
+			);
+			name = cognalysDemoAppTests;
+			productName = cognalysDemoAppTests;
+			productReference = 841205C71B4CF83000717ECB /* cognalysDemoAppTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		841205A61B4CF82F00717ECB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Mfluid Mobile Apps Pvt. Ltd.";
+				TargetAttributes = {
+					841205AD1B4CF82F00717ECB = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
+					841205C61B4CF83000717ECB = {
+						CreatedOnToolsVersion = 6.3.2;
+						TestTargetID = 841205AD1B4CF82F00717ECB;
+					};
+				};
+			};
+			buildConfigurationList = 841205A91B4CF82F00717ECB /* Build configuration list for PBXProject "cognalysDemoApp" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 841205A51B4CF82F00717ECB;
+			productRefGroup = 841205AF1B4CF82F00717ECB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				841205AD1B4CF82F00717ECB /* cognalysDemoApp */,
+				841205C61B4CF83000717ECB /* cognalysDemoAppTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		841205AC1B4CF82F00717ECB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841205BD1B4CF83000717ECB /* Main.storyboard in Resources */,
+				841205C21B4CF83000717ECB /* LaunchScreen.xib in Resources */,
+				841205BF1B4CF83000717ECB /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841205C51B4CF83000717ECB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		841205AA1B4CF82F00717ECB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841205BA1B4CF82F00717ECB /* ViewController.m in Sources */,
+				841205B71B4CF82F00717ECB /* AppDelegate.m in Sources */,
+				841205B41B4CF82F00717ECB /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		841205C31B4CF83000717ECB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				841205CE1B4CF83000717ECB /* cognalysDemoAppTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		841205C91B4CF83000717ECB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 841205AD1B4CF82F00717ECB /* cognalysDemoApp */;
+			targetProxy = 841205C81B4CF83000717ECB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		841205BB1B4CF83000717ECB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				841205BC1B4CF83000717ECB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		841205C01B4CF83000717ECB /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				841205C11B4CF83000717ECB /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		841205CF1B4CF83000717ECB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		841205D01B4CF83000717ECB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		841205D21B4CF83000717ECB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = cognalysDemoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		841205D31B4CF83000717ECB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = cognalysDemoApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		841205D51B4CF83000717ECB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = cognalysDemoAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cognalysDemoApp.app/cognalysDemoApp";
+			};
+			name = Debug;
+		};
+		841205D61B4CF83000717ECB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = cognalysDemoAppTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/cognalysDemoApp.app/cognalysDemoApp";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		841205A91B4CF82F00717ECB /* Build configuration list for PBXProject "cognalysDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				841205CF1B4CF83000717ECB /* Debug */,
+				841205D01B4CF83000717ECB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		841205D11B4CF83000717ECB /* Build configuration list for PBXNativeTarget "cognalysDemoApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				841205D21B4CF83000717ECB /* Debug */,
+				841205D31B4CF83000717ECB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		841205D41B4CF83000717ECB /* Build configuration list for PBXNativeTarget "cognalysDemoAppTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				841205D51B4CF83000717ECB /* Debug */,
+				841205D61B4CF83000717ECB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 841205A61B4CF82F00717ECB /* Project object */;
+}
