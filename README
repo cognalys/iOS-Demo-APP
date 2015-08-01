@@ -8,8 +8,17 @@ libcognalys.a is a static library for mobile number verification through cognaly
 
 Requirements
 
+For libcognalys.a
+
 Device     : iPhone
 OS Version : iOS 6 and above
+
+
+For Demo Application < cognalysDemoApp >
+
+
+Device     : iPhone
+OS Version : iOS 8 and above
 
 
 HOW TO GET STARTED - INSTALLATION
@@ -70,14 +79,22 @@ Upon initializing , libcognalys will set Access Token and App ID as given. User 
 /^^^^^^^^^^^^^^^^^^ Request For A Phone Number Verification ^^^^^^^^^^^^^^^^^^^^^
 /^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 /################################################################################
+
+
 /^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 Method     : initiateAPIWithMobileNumber:
+
 /^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 -(void)initiateAPIWithMobileNumber:(NSString *) cog_mobileNumber
 
 Input      : cog_mobileNumber --->  String variable that holds the number
 *									to request miscall
+
+
 //^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 * @abstract:
 * This function, when called, will initialize resources for the. In
 * general, this function will request for a miscall to libcognalys.a.
@@ -134,8 +151,12 @@ Usage  ---   >>>>>>
 /^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 /################################################################################
 /^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+
 Method     : verifyOTP_withNumberCopyedFromTheLog:
+
 /^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
 -(void)verifyOTP_withNumberCopyedFromTheLog:(NSString *) cog_mobileNumber
 
 Input      : cog_mobileNumber --->  The mobile number which you requested to verify
