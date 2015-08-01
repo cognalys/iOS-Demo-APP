@@ -1,0 +1,223 @@
+
+//################################################################################################
+
+
+libcognalys.a is a static library for mobile number verification through cognalys.com. libcognalys will allow the developers to access the cognalys API controls in an easiest way so that developer can simply drag and drop the library into their iOS projects and start using the full functionalities provided by the team cognalys.
+
+
+
+Requirements
+
+Device     : iPhone
+OS Version : iOS 6 and above
+
+
+HOW TO GET STARTED - INSTALLATION
+
+
+1. Create an Xcode project
+
+2. Open project root folder and create a folder named 'Lib'
+
+3. Drag and drop both library files  ( cognalys.h , libcognalys.a ) to folder 'Lib'
+
+4. Drop both the files from folder to Xcode project. Remember to uncheck "copy items into destination group’s folder" since the library files are already added in our project root folder.
+
+5. Go to the class where you want to access the library and #import "cognalys.h"
+
+6. Add the delegate "WebserviceDelegate" in order to get the asynchronous call back notifications.
+
+7. Add NSLocationWhenInUseUsageDescription or NSLocationAlwaysUsageDescription as a key in Info.plist with a message as string if needed. Before starting location updations, iOS 8 sdk needs these keys in info.plist.
+
+8. Now build the project and it is set to use the library.
+
+
+
+USAGE
+
+
+
+Initiate API
+
+<Example>  < Add this code in viewDidLoad >
+
+cognalys* cognalysLib       =   [[cognalys alloc]init];     // Create an object for cognalys library.
+
+cognalysLib.delegate        =   self;                       // Set cognalys library object delegate as self.
+
+cognalysLib.access_token    =   <Your Access Token>;        // Set the Access Token
+
+cognalysLib.app_ID          =   <Your App ID>;              // Set Application ID
+
+cognalysLib.getLocation     =   TRUE;                       // Set getLocation flag as TRUE/FALSE. By default it is set
+
+//   as TRUE.
+
+cognalysLib.canRetryVerification=YES;                   // set it as true if you want to retry the verification
+                                                         //if there is no miscall received.
+
+
+
+
+
+Upon initializing , libcognalys will set Access Token and App ID as given. User can change this before using the number verification API. access_token and app_ID is mandatory. Set delegate self to receive asynchronous call backs.
+
+
+
+
+
+
+
+
+/################################################################################
+/^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/^^^^^^^^^^^^^^^^^^ Request For A Phone Number Verification ^^^^^^^^^^^^^^^^^^^^^
+/^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/################################################################################
+/^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Method     : initiateAPIWithMobileNumber:
+/^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-(void)initiateAPIWithMobileNumber:(NSString *) cog_mobileNumber
+
+Input      : cog_mobileNumber --->  String variable that holds the number
+*									to request miscall
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* @abstract:
+* This function, when called, will initialize resources for the. In
+* general, this function will request for a miscall to libcognalys.a.
+* before calling initiateAPIWithMobileNumber , developer should pass access token and app_ID to
+* libcognalys in order to verify the cognalys account. Optionally developer can set getLocation to
+* access / track the user location
+* Optionally we are sending Device model, Current OS version , Device ID with the URL request.
+* track the location through init.
+
+
+Usage  ---   >>>>>>
+
+// Put these code in your class.
+
+
+-(void)methodForMobileVerification
+{
+
+    [cognalysLib initiateAPIWithMobileNumber:< Number To Verify >];
+
+}
+
+// and two  delegate methods for asynchronous call back.
+
+-(void)cog_CallConnectedSuccessNotif:(NSDictionary *)cog_CallbackData
+{
+    NSLog(@"%@",[cog_CallbackData valueForKey:@"status"]);        //Status of mobile number verification Api
+    NSLog(@"%@",[cog_CallbackData valueForKey:@"keymatch"]);      //This should be requested when you hit the second API call
+    NSLog(@"%@",[cog_CallbackData valueForKey:@"mobile"]);         //The mobile number which you requested to verify
+    NSLog(@"%@",[cog_CallbackData valueForKey:@"otp_start"]);      //The first five digits of the cognalys missed call number
+
+}
+-(void)cog_CallConnectedErrorNotif:(NSDictionary *)cog_CallbackData
+{
+    NSLog(@"%@",cog_CallbackData);                                  //return "ERROR_CODE": "ERROR_MESSAGE"
+
+}
+
+-(void)mobileVerificationRetryWithMessage:(NSString *)cog_retryMessage
+{
+    NSLog(@"%@",cog_retryMessage); // Message
+}
+-(void)mobileVerificationRetryFailedWithMessage:(NSString *)cog_retryMessage
+{
+    NSLog(@"%@",cog_retryMessage); //Message
+}
+-(void)cog_APISuccessAndReceivedMiscall
+{
+    // This method will trigger when you receive miscall from the server after successful initialization of API.
+    // You can display the OTP verification page
+}
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+///################################################################################
+/##################################################################################
+
+
+
+
+
+
+
+
+
+/################################################################################
+/^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/^^^^^^^^^^^^^^^^^^^^^^^^^^  OTP Verification  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/################################################################################
+/^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Method     : verifyOTP_withNumberCopyedFromTheLog:
+/^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+-(void)verifyOTP_withNumberCopyedFromTheLog:(NSString *) cog_mobileNumber
+
+Input      : cog_mobileNumber --->  The mobile number which you requested to verify
+
+//^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+* @abstract: verifyOTP_withNumberCopyedFromTheLog:
+* This function, when called, to verify the OTP. In
+* general, this function will confirm mobile number that we request for miscall.
+* Developer need to pass only a missed call number which copied from the device.
+* This function will send a request to congalys to verify OTP with the number copied and key match that.
+* Optionally we are sending Device model, Current OS version , Device ID with the request.
+
+* @param[in] cog_mobileNumber   	String variable that holds the number
+*									to verify OTP.
+
+Usage  ---   >>>>>>
+
+// Put this code in your own method.
+
+
+-(void)methodForOTPVerification
+{
+
+    [cognalysLib verifyOTP_withNumberCopyedFromTheLog:< Number To Verify >];
+
+}
+
+// and add two  delegate methods for asynchronous call back.
+
+-(void)cog_OTPVerificationSuccessNotif:(NSDictionary *)cog_CallbackData
+{
+
+    NSLog(@"%@",[cog_CallbackData valueForKey:@"status"]);         //Status of OTP verification Api
+    NSLog(@"%@",[cog_CallbackData valueForKey:@"message"]);        //The message when everything went correct
+
+}
+-(void)cog_CallConnectedErrorNotif:(NSDictionary *)cog_CallbackData
+{
+    NSLog(@"%@",[cog_CallbackData valueForKey:@"status"]);        //Status of OTP verification Api
+
+    NSLog(@"%@",[cog_CallbackData valueForKey:@"mobile"]);         //The mobile number which you requested to verify
+
+    NSLog(@"%@",[cog_CallbackData valueForKey:@"errors"]);         //Holds errors occured
+
+
+
+}
+
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+///################################################################################
+/##################################################################################
+
+
+
+
+
+
+############################################# FOR BACKEND ###########################
+
+
+
+https://www.cognalys.com/api/v1/otp/?access_token=<Access Token>&app_id=<App ID>&mobile=<Mobile Number>&deviceModel=<Device Model>&systemVersion=<System Version>&lattitude=<Lattitude>&longitude=<Longitude>&deviceID=<DeviceID>
+
+
+
+
+

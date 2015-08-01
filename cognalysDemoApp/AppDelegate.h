@@ -2,8 +2,8 @@
 //  AppDelegate.h
 //  cognalysDemoApp
 //
-//  Created by MFluid Apps on 08/07/15.
-//  Copyright (c) 2015 Mfluid Mobile Apps Pvt. Ltd. All rights reserved.
+//  Created by Neeraj Apps on 08/07/15.
+//  Copyright (c) 2015. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>

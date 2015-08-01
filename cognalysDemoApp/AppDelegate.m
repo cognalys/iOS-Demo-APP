@@ -2,8 +2,8 @@
 //  AppDelegate.m
 //  cognalysDemoApp
 //
-//  Created by MFluid Apps on 08/07/15.
-//  Copyright (c) 2015 Mfluid Mobile Apps Pvt. Ltd. All rights reserved.
+//  Created by Neeraj on 08/07/15.
+//  Copyright (c) 2015 . All rights reserved.
 //
 
 #import "AppDelegate.h"
@@ -17,6 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    sleep(2);
+    
     return YES;
 }
 
